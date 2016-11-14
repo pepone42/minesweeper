@@ -1,0 +1,9 @@
+[package]
+name = "mine2"
+version = "0.1.0"
+authors = ["Mathieu PEPONAS <m.peponas@gmail.com>"]
+
+[dependencies]
+rand = "*"
+clippy = "*"
+rustyline = "1.0.0"

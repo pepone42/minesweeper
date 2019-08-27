@@ -1,6 +1,3 @@
-#![feature(plugin)]
-#![plugin(clippy)]
-
 mod towdarray;
 mod minefield;
 mod mine;

@@ -1,5 +1,6 @@
 
-use rand::{thread_rng, Rng};
+
+use rand::prelude::*;
 // use std::{thread, time};
 
 use towdarray::TowDArray;
@@ -32,7 +33,9 @@ impl MineField {
             let p = m.grid.position_to_point(i as usize);
             m.grid[p].is_bomb = true;
         }
-        thread_rng().shuffle(&mut m.grid);
+        //thread_rng().shuffle(&mut m.grid);
+        let mut rng = rand::thread_rng();
+        m.grid.shuffle(&mut rng);
         m.calculate_neighbor_count();
         m
     }
